@@ -4,7 +4,7 @@
   "description": "training nodejs",
   "main": "index.js",
   "scripts": {
-    "formatcode": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'",
+    "formatcode": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass -w src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/TruongGiangBui/TraningNodejs#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
   },
   "husky": {
     "hooks": {
