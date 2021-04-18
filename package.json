@@ -4,8 +4,9 @@
   "description": "training nodejs",
   "main": "index.js",
   "scripts": {
+    "formatcode": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'",
     "start": "nodemon --inspect src/index.js",
-    "watch":"node-sass -w src/resources/scss/ --output src/public/css/",
+    "watch": "node-sass -w src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,8 +28,11 @@
     "express-handlebars": "^5.3.0"
   },
   "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "morgan": "^1.10.0",
     "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
