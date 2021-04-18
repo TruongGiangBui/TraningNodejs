@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "training nodejs",
   "main": "index.js",
+  
   "scripts": {
-    "formatcode": "lint-staged",
+    "lint": "lint-staged",
+    "formatcode": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,scss,json}'",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass -w src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +26,7 @@
   },
   "homepage": "https://github.com/TruongGiangBui/TraningNodejs#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+    "src/**/*.{js,scss,json}": "npm run formatcode"
   },
   "husky": {
     "hooks": {
