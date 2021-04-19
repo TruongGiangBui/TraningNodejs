@@ -5,6 +5,10 @@ const morgan = require('morgan');
 const port = 3000;
 const handlebars = require('express-handlebars');
 const route = require('./routes');
+const db = require('./config/db');
+
+db.connect();
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
 app.use(

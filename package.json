@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "training nodejs",
   "main": "index.js",
-  
   "scripts": {
     "lint": "lint-staged",
     "formatcode": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,scss,json}'",
@@ -35,7 +34,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.0"
+    "express-handlebars": "^5.3.0",
+    "mongoose": "^5.12.4"
   },
   "devDependencies": {
     "husky": "^6.0.0",
